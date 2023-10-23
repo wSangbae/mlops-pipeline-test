@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '16de46d0-07f9-4712-a247-f0870425e5e0'
 
   # Web app name
-  webAppName: 'flask-ml-practical-mlops'
+  webAppName: 'mymlops'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'flask-ml-practical-mlops'
+  environmentName: 'mymlops'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : flask-ml-practical-mlops'
+            displayName: 'Deploy Azure Web App : mymlops'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
